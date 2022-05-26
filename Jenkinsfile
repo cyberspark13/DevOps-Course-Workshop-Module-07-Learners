@@ -26,7 +26,7 @@ pipeline {
             }
             
             steps {
-                echo 'Testing..'
+                sh 'npm install && npm run build'
             }
         }
         stage('Deploy') {

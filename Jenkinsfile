@@ -26,7 +26,9 @@ pipeline {
             }
             
             steps {
-                sh 'npm install && npm run build'
+                dir ('DotnetTemplate.web/'){
+                    sh 'npm install && npm run build'
+                    }
             }
         }
         stage('Deploy') {

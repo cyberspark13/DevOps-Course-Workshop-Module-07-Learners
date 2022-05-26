@@ -14,7 +14,7 @@ pipeline {
                 DOTNET_CLI_HOME = '/tmp/DOTNET_CLI_HOME'
             }
             steps {
-                echo 'Building'
+                sh 'dotnet build'
             }
         }
         stage('Test') {

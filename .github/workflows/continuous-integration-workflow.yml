@@ -12,3 +12,12 @@ jobs:
         dotnet-version: '6.0.x'
         include-prerelease: true
     - run: dotnet build
+    - run: dotnet test
+    - run: npm install
+      working-directory: DotnetTemplate.Web
+    - run: npm run build
+      working-directory: DotnetTemplate.Web
+    - run: npm t
+      working-directory: DotnetTemplate.Web
+    - run: npm run lint
+      working-directory: DotnetTemplate.Web

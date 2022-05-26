@@ -11,7 +11,7 @@ pipeline {
             }
 
             environment {
-                DOTNET_CLI_HOME = 'tmp/DOTNET_CLI_HOME'
+                DOTNET_CLI_HOME = '/tmp/DOTNET_CLI_HOME'
             }
             steps {
                 echo 'Building'

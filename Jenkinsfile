@@ -27,7 +27,7 @@ pipeline {
             
             steps {
                 dir ('DotnetTemplate.Web/'){
-                    sh 'npm install && npm run build'
+                    sh 'npm install && npm run build && npm t && npm run lint'
                     }
             }
         }
